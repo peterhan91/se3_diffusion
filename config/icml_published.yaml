@@ -16,7 +16,7 @@ experiment:
   rot_loss_t_threshold: 0.0
   rot_loss_weight: 1.0
   separate_rot_loss: False
-  sample_mode: time_batch
+  sample_mode: cluster_time_batch
 
 hydra:
   sweeper:

@@ -5,8 +5,8 @@ defaults:
 
 data:
   # CSV for path and metadata to training examples.
-  csv_path: ./data/processed_pdb/metadata.csv
-  cluster_path: ./data/processed_pdb/clusters-by-entity-30.txt
+  csv_path: ./data/data/processed_pdb/metadata.csv
+  cluster_path: ./data/data/processed_pdb/clusters-by-entity-30.txt
   filtering:
     max_len: 512
     min_len: 60
@@ -78,13 +78,13 @@ experiment:
   log_freq: 1000
   batch_size: 256
   eval_batch_size: ${data.samples_per_eval_length}
-  num_loader_workers: 5
+  num_loader_workers: 8
   num_epoch: 500_000
   learning_rate: 0.0001
   max_squared_res: 500000
   prefetch_factor: 100
   use_gpu: True
-  num_gpus: 2
+  num_gpus: 3
   sample_mode: cluster_time_batch
 
   # Wandb logging
